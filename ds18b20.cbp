@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ds18b20" />
+		<Option platforms="Unix;" />
+		<Option pch_mode="2" />
+		<Option compiler="sdcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="ds18b20" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/" />
+				<Option type="0" />
+				<Option compiler="sdcc" />
+			</Target>
+			<Target title="Debug">
+				<Option output="ds18b20" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="sdcc" />
+				<Compiler>
+					<Add directory="../" />
+				</Compiler>
+			</Target>
+			<Target title="clean">
+				<Option output="ds18b20" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="sdcc" />
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="flash" targets="Release;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-DSTM8S103" />
+		</Compiler>
+		<Unit filename="../stm8.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="Makefile">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="ds18b20.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
